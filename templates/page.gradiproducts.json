@@ -7,7 +7,7 @@
         "padding_bottom": 28
       }
     },
-    "form": {
+    "products": {
       "type": "productsgrid",
       "settings": {
       }
@@ -15,6 +15,6 @@
   },
   "order": [
     "main",
-    "form"
+    "products"
   ]
 }
