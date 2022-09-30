@@ -11,7 +11,7 @@
       "type": "productsgrid",
       "settings": {
         "collection": "all",
-        "products_to_show": 8,
+        "products_to_show": 12,
         "columns_desktop": 4
       }
     }
