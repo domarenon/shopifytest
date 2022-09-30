@@ -7,7 +7,7 @@
         "padding_bottom": 28
       }
     },
-    "products": {
+    "product-grid": {
       "type": "productsgrid",
       "settings": {
         "products_per_page": 16,
@@ -28,6 +28,6 @@
   },
   "order": [
     "main",
-    "products"
+    "product-grid"
   ]
 }
