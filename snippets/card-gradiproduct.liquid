@@ -128,26 +128,27 @@
         </div>
       </div>
       
-      <div class="card__content" style="z-index:10">
+      <div class="card__content" style="z-index:2">
         <div class="card__information">
+          {% assign colorsArr = settings.gradicolors | newline_to_br | split: '<br />' %}
           {%- for options in card_product.options_with_values -%}
             {% if options.name == "Color" %}
               <div class =" option__container">
                 {% for option in options.values %}
                   <div class = "option__item" >
-                    <div class ="option_color" onclick="javascript:console.log('card_product');console.log(option)" onmouseover="javascript:alert('{{option}}');" style="background-color:
-                    {% if option == settings.text_color_1 %}
-                    {{settings.color_1}}
-                    {% elsif option == settings.text_color_2 %}
-                    {{settings.color_2}}
-                    {% elsif option == settings.text_color_3 %}
-                    {{settings.color_3}}
-                    {% elsif option == settings.text_color_4 %}
-                    {{settings.color_4}}
-                    {% elsif option == settings.text_color_5 %}
-                    {{settings.color_5}}
-                    {% endif %}"> </div>
+                    <div class ="option_color" onclick="changeImage(option)" onmouseover="javascript:alert('{{option}}');" 
+                      style="background-color:
+                      {% for color in colorsArr %}
+                        {% assign colorStripped = color | strip %}
+                        {% if colorStripped == option %}
+                          {% assign i = forloop.index0 | plus: 1 %}
+                          {{colorsArr[i]}}
+                        {% endif %}
+                      {% endfor %}
+                      "> 
+                    </div>
                   </div>
+                  
                 {% endfor %}
                 
               </div>
