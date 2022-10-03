@@ -47,6 +47,30 @@
         "default": "#0000FF",
         "label": "Color 3"
       },
+      {
+        "type": "text",
+        "id": "text_color_4",
+        "default": "Red",
+        "label": "Color 4"
+      },
+      {
+        "type": "color",
+        "id": "color_4",
+        "default": "#DC143C",
+        "label": "Color 4"
+      },
+      {
+        "type": "text",
+        "id": "text_color_5",
+        "default": "Yellow",
+        "label": "Color 5"
+      },
+      {
+        "type": "color",
+        "id": "color_5",
+        "default": "#B8860B",
+        "label": "Color 5"
+      }
     ]
   },
   {
