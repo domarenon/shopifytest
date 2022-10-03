@@ -21,8 +21,32 @@
         "type": "color",
         "id": "color_1",
         "default": "#FFFFFF",
-        "label": "t:settings_schema.colors.settings.colors_solid_button_labels.label"
-      }
+        "label": "Color 1"
+      },
+      {
+        "type": "text",
+        "id": "text_color_2",
+        "default": "Black",
+        "label": "Color 2"
+      },
+      {
+        "type": "color",
+        "id": "color_2",
+        "default": "#000000",
+        "label": "Color 2"
+      },
+      {
+        "type": "text",
+        "id": "text_color_3",
+        "default": "Blue",
+        "label": "Color 3"
+      },
+      {
+        "type": "color",
+        "id": "color_3",
+        "default": "#0000FF",
+        "label": "Color 3"
+      },
     ]
   },
   {
