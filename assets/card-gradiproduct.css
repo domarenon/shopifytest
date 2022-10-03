@@ -1,3 +1,19 @@
-.option {
-    color: red;
+.option__container {
+    bottom: 10px;
+    left: 50%;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.option__item{
+    position:relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background: #ffffff;
+}
+
+.option__item.active {
+    border: 2px solid #000000;
 }
