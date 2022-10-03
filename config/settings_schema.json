@@ -7,78 +7,24 @@
     "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/online-store\/themes",
     "theme_support_url": "https:\/\/support.shopify.com\/"
   },
+  
   {
     "name": "Colores de Gradi Productos",
     "settings": [
       {
-        "type": "color",
-        "id": "colors_solid_button_labels",
-        "default": "#FFFFFF",
-        "label": "t:settings_schema.colors.settings.colors_solid_button_labels.label"
+        "type": "text",
+        "id": "text_color_1",
+        "default": "White",
+        "label": "Color 1"
       },
       {
         "type": "color",
-        "id": "colors_solid_button_labels",
-        "default": "#FFFFFF",
-        "label": "t:settings_schema.colors.settings.colors_solid_button_labels.label"
-      },
-      {
-        "type": "color",
-        "id": "colors_solid_button_labels",
-        "default": "#FFFFFF",
-        "label": "t:settings_schema.colors.settings.colors_solid_button_labels.label"
-      },
-      {
-        "type": "color",
-        "id": "colors_solid_button_labels",
-        "default": "#FFFFFF",
-        "label": "t:settings_schema.colors.settings.colors_solid_button_labels.label"
-      },
-      {
-        "type": "color",
-        "id": "colors_solid_button_labels",
-        "default": "#FFFFFF",
-        "label": "t:settings_schema.colors.settings.colors_solid_button_labels.label"
-      },
-      {
-        "type": "color",
-        "id": "colors_solid_button_labels",
+        "id": "color_1",
         "default": "#FFFFFF",
         "label": "t:settings_schema.colors.settings.colors_solid_button_labels.label"
       }
     ]
   },
-
-
-  {
-    "name": "Slideshow",
-    "tag": "section",
-    "class": "slideshow",
-    "max_blocks": 5,
-    "settings": [
-      {
-        "type": "text",
-        "id": "title",
-        "label": "Slideshow"
-      }
-    ],
-    "blocks": [
-       {
-         "name": "Slide",
-         "type": "slide",
-         "settings": [
-           {
-             "type": "image_picker",
-             "id": "image",
-             "label": "Image"
-           }
-         ]
-       }
-     ]
-  },
-
-
-
   {
     "name": "t:settings_schema.colors.name",
     "settings": [
