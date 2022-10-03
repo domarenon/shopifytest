@@ -11,64 +11,9 @@
     "name": "Colores de Gradi Productos",
     "settings": [
       {
-        "type": "text",
-        "id": "text_color_1",
-        "default": "White",
-        "label": "Color 1"
-      },
-      {
-        "type": "color",
-        "id": "color_1",
-        "default": "#FFFFFF",
-        "label": "Color 1"
-      },
-      {
-        "type": "text",
-        "id": "text_color_2",
-        "default": "Black",
-        "label": "Color 2"
-      },
-      {
-        "type": "color",
-        "id": "color_2",
-        "default": "#000000",
-        "label": "Color 2"
-      },
-      {
-        "type": "text",
-        "id": "text_color_3",
-        "default": "Blue",
-        "label": "Color 3"
-      },
-      {
-        "type": "color",
-        "id": "color_3",
-        "default": "#0000FF",
-        "label": "Color 3"
-      },
-      {
-        "type": "text",
-        "id": "text_color_4",
-        "default": "Red",
-        "label": "Color 4"
-      },
-      {
-        "type": "color",
-        "id": "color_4",
-        "default": "#DC143C",
-        "label": "Color 4"
-      },
-      {
-        "type": "text",
-        "id": "text_color_5",
-        "default": "Yellow",
-        "label": "Color 5"
-      },
-      {
-        "type": "color",
-        "id": "color_5",
-        "default": "#B8860B",
-        "label": "Color 5"
+        "type": "textarea",
+        "id": "gradicolors",
+        "label": "Colores de Gradi Productos"
       }
     ]
   },

@@ -127,17 +127,32 @@
           </div>
         </div>
       </div>
-      <div class="card__content">
+      
+      <div class="card__content" style="z-index:10">
         <div class="card__information">
           {%- for options in card_product.options_with_values -%}
-            <div class =" option__container">
-              {% for option in options.values %}
-                <div class = "option__item" >
-                  <div class ="option">{{option}}</div>
-                </div>
-              {% endfor %}
-              
-            </div>
+            {% if options.name == "Color" %}
+              <div class =" option__container">
+                {% for option in options.values %}
+                  <div class = "option__item" >
+                    <div class ="option_color" onclick="javascript:console.log('card_product');console.log(option)" onmouseover="javascript:alert('{{option}}');" style="background-color:
+                    {% if option == settings.text_color_1 %}
+                    {{settings.color_1}}
+                    {% elsif option == settings.text_color_2 %}
+                    {{settings.color_2}}
+                    {% elsif option == settings.text_color_3 %}
+                    {{settings.color_3}}
+                    {% elsif option == settings.text_color_4 %}
+                    {{settings.color_4}}
+                    {% elsif option == settings.text_color_5 %}
+                    {{settings.color_5}}
+                    {% endif %}"> </div>
+                  </div>
+                {% endfor %}
+                
+              </div>
+            {% endif %}
+            
           {%- endfor -%}
         </div>
       </div>
