@@ -1,6 +1,6 @@
 {
   "current": {
-    "gradicolors": "White:\n#FFFFFF\nBlack:\n#000000\nBlue:\n#6495ED\nRed:\n#DC143C\nGreen:\n#006400",
+    "gradicolors": "White\n#FFFFFF\nBlack\n#000000\nBlue\n#6495ED\nRed\n#DC143C\nGreen\n#006400",
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
     "gradient_accent_1": "",
