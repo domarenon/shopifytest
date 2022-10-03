@@ -1,5 +1,7 @@
 {
   "current": {
+    "text_color_5": "Green",
+    "color_5": "#0bb83c",
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
     "gradient_accent_1": "",
@@ -215,7 +217,10 @@
           "color_scheme": "background-1"
         }
       }
-    }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {
