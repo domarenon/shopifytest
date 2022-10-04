@@ -42,9 +42,9 @@
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
         {% for variant in card_product.variants %}
-          {%- if variant.featured_media  -%}
+          {%- if variant.featured_media and card_product.options_with_values[0].name == "Color" -%}
             <div class="card__media"
-              data-image="{{variant.option1}}"
+              data-color="{{variant.option1}}"
               {% if forloop.index0 == 0 %} 
                 style="display:block"
               {% else %}
@@ -153,11 +153,11 @@
                       {% if colorStripped == option %}
                         {% assign i = forloop.index0 | plus: 1 %}
                         {% assign colorSelected = colorsArr[i] %}
-                        {% assign dataImage = colorStripped %}
+                        {% assign dataColor = colorStripped %}
                       {% endif %}
                     {% endfor %}
                     <optionColor class ="option_color" 
-                      data-image ="{{ dataImage }}"
+                      data-color ="{{ dataColor }}"
                       style="background-color: {{ colorSelected }}"> 
                     </optionColor>
                   </div>
@@ -186,7 +186,18 @@
           </h3>
           <div class="card-information">
             <span class="caption-large light">{{ card_product.content }}</span>
-            {% render 'gradiprice', product: card_product, price_class: '' %}
+            {% if card_product.options_with_values[0].name == "Color" %}
+              {% for variant in card_product.variants %}
+                {% if forloop.index0 == 0 %}
+                  {% render 'gradiprice', variant: variant, data_color: variant.option1, price_class: 'gradiprice price-selected' %}
+                {% else %}
+                  {% render 'gradiprice', variant: variant, data_color: variant.option1, price_class: 'gradiprice' %}
+                {% endif %}
+              {% endfor %}
+              {% else %}
+              {% render 'price', product: card_product, price_class: '' %}
+            {% endif %}
+            
           </div>
         </div>
         

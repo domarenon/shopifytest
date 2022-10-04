@@ -34,3 +34,11 @@
 .option__item.selected{
     border:solid 2px black;
 }
+
+.gradiprice{
+    display:none;
+}
+
+.price-selected{
+    display:block;
+}
