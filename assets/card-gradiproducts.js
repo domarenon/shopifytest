@@ -35,12 +35,15 @@ function changePrice(optionColorElement){
     let dataColor = getDataColor(optionColorElement);
     let productElement = optionColorElement.closest('.card--media')
     let prices = productElement.querySelectorAll(".price")
+    let variantId;
     for (let i=0; i < prices.length; i++) {
         prices[i].classList.remove("price-selected");
         if (dataColor == prices[i].getAttribute('data-color')){
             prices[i].classList.add("price-selected");
+            variantId = prices[i].getAttribute("target-id")
         }
     }
+    productElement.querySelector(".gradi-add-to-cart").setAttribute("data-product-id",variantId)
 }
 
 function changeImage(optionColorElement){
@@ -65,3 +68,4 @@ function getClosestOptionColors(element){
     let allOptions = optionContainer.querySelectorAll('.option__item')
     return (allOptions)
 }
+

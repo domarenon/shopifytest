@@ -12,6 +12,7 @@
 {% endcomment %}
 {%- liquid
   assign target = variant
+  assign target-id = target.id
   assign compare_at_price = target.compare_at_price
   assign price = target.price | default: 1999
   assign available = target.available | default: false
@@ -27,6 +28,7 @@
 
 <div 
   data-color='{{data_color}}'
+  target-id = '{{target-id}}'
   class="price
   {%- if price_class %} {{ price_class }}{% endif -%}
   {%- if available == false %} price--sold-out {% endif -%}
