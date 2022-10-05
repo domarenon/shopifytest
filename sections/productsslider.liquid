@@ -1,4 +1,4 @@
-{{ 'card-gradiproduct.css' | asset_url | stylesheet_tag }}
+{{ 'slider-gradiproduct.css' | asset_url | stylesheet_tag }}
 
 <script src="{{ 'card-gradiproducts.js' | asset_url }}" defer="defer"></script>
 
@@ -7,16 +7,24 @@
 
   <section class="product-slider">
     <div class="slider__container">
-      <img src="{{ 'left-arrow.svg' | asset_img_url}}"></img>
+      <img src="{{ 'left-arrow.png' | asset_img_url}}"></img>
+      {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+        <section class="slider__body {% if forloop.index == 1 %} slider__body--show {%endif%}" data-id="{{forloop.index}}">
+          <h3 class ="custom-title">{{product.metafields.custom.titulo.value}}</h3>
+          <p class= "custon-description">{{product.metafields.custom.descripcion.value}}</p>
+          <figure class="slider__picture">
+            <img class="slider__img" src="{{product.metafields.custom.imagen.value | img_url: '500x500' }}"/>  
+          </figure>
+        </section>
+      {%- endfor -%}
+      
+      
+      <img src="{{ 'right-arrow.png' | asset_img_url}}"></img> 
+      
+      
+      
       <ul id="PSlider-{{ section.id }}" class="grid product-grid contains-card contains-card--product grid--4-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% endif %}" role="list" aria-label="{{ 'general.slider.name' | t }}">
-        {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-          <li id="PSlide-{{ section.id }}-{{ forloop.index }}" class="grid__item">
-            <p>{{product.metafields.custom.titulo.value}}</p>
-            <p>{{product.metafields.custom.descripcion.value}}</p>
-            <img src="{{product.metafields.custom.imagen.value | img_url: '500x500' }}"/>
-            
-          </li>
-        {%- endfor -%}
+        
       </ul>
     </div> 
   </section>
