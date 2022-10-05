@@ -14,10 +14,17 @@
         "products_to_show": 12,
         "columns_desktop": 4
       }
+    },
+    "product-slider": {
+      "type": "productsslider",
+      "settings": {
+        "products_to_show": 12
+      }
     }
   },
   "order": [
     "main",
-    "product-grid"
+    "product-grid",
+    "product-slider"
   ]
 }
