@@ -4,17 +4,16 @@
 
 <div class="page-width">
 
-  
 
-  {% comment %} <slider-component class="slider-mobile-gutter">
-    <ul id="Slider-{{ section.id }}" class="grid product-grid contains-card contains-card--product grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% endif %}" role="list" aria-label="{{ 'general.slider.name' | t }}">
+  <slider-component class="slider-mobile-gutter">
+    <ul id="PSlider-{{ section.id }}" class="grid product-grid contains-card contains-card--product grid--4-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% endif %}" role="list" aria-label="{{ 'general.slider.name' | t }}">
       {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-        <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="grid__item">
+        <li id="PSlide-{{ section.id }}-{{ forloop.index }}" class="grid__item">
           
         </li>
       {%- endfor -%}
     </ul>
-  </slider-component> {% endcomment %}
+  </slider-component> 
 </div>
 
 {% schema %}
@@ -23,6 +22,11 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:sections.featured-collection.settings.collection.label"
+    },
     {
       "type": "range",
       "id": "products_to_show",

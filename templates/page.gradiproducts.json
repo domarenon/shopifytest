@@ -18,7 +18,8 @@
     "product-slider": {
       "type": "productsslider",
       "settings": {
-        "products_to_show": 12
+        "products_to_show": 12,
+        "collection": "all"
       }
     }
   },
