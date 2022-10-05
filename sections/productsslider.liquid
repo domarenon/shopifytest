@@ -5,15 +5,21 @@
 <div class="page-width">
 
 
-  <slider-component class="slider-mobile-gutter">
-    <ul id="PSlider-{{ section.id }}" class="grid product-grid contains-card contains-card--product grid--4-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% endif %}" role="list" aria-label="{{ 'general.slider.name' | t }}">
-      {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
-        <li id="PSlide-{{ section.id }}-{{ forloop.index }}" class="grid__item">
-          
-        </li>
-      {%- endfor -%}
-    </ul>
-  </slider-component> 
+  <section class="product-slider">
+    <div class="slider__container">
+      <img src="{{ 'left-arrow.svg' | asset_img_url: '300x', crop: 'center' }}"></img>
+      <ul id="PSlider-{{ section.id }}" class="grid product-grid contains-card contains-card--product grid--4-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% endif %}" role="list" aria-label="{{ 'general.slider.name' | t }}">
+        {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+          <li id="PSlide-{{ section.id }}-{{ forloop.index }}" class="grid__item">
+            <p>{{product.metafields.custom.titulo.value}}</p>
+            <p>{{product.metafields.custom.descripcion.value}}</p>
+            <img src="{{product.metafields.custom.imagen.value | img_url: '500x500' }}"/>
+            
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div> 
+  </section>
 </div>
 
 {% schema %}
