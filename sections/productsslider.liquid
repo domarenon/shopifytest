@@ -1,17 +1,19 @@
 {{ 'slider-gradiproduct.css' | asset_url | stylesheet_tag }}
 
-<script src="{{ 'card-gradiproducts.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'slider-gradiproduct.js' | asset_url }}" defer="defer"></script>
 
 <div class="page-width">
 
 
   <section class="product-slider">
-    <div class="slider__container">
-      <img src="{{ 'left-arrow.png' | asset_img_url}}"></img>
+    <div class="container slider__container">
+      <img class="slider__arrow" id="prev" src="{{ 'left-arrow.png' | asset_img_url}}"></img>
       {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
         <section class="slider__body {% if forloop.index == 1 %} slider__body--show {%endif%}" data-id="{{forloop.index}}">
-          <h3 class ="custom-title">{{product.metafields.custom.titulo.value}}</h3>
-          <p class= "custon-description">{{product.metafields.custom.descripcion.value}}</p>
+          <div class="slider__text">
+            <h3 class ="custom-title">{{product.metafields.custom.titulo.value}}</h3>
+            <p class= "custom-description">{{product.metafields.custom.descripcion.value}}</p>
+          </div>
           <figure class="slider__picture">
             <img class="slider__img" src="{{product.metafields.custom.imagen.value | img_url: '500x500' }}"/>  
           </figure>
@@ -19,7 +21,7 @@
       {%- endfor -%}
       
       
-      <img src="{{ 'right-arrow.png' | asset_img_url}}"></img> 
+      <img class="slider__arrow" id="next" src="{{ 'right-arrow.png' | asset_img_url}}"></img> 
       
       
       
